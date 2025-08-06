@@ -20,6 +20,24 @@ class HomePage extends StatelessWidget {
               },
               child: const Text('Cotext Extensions'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed('/widget_margin_x');
+              },
+              child: const Text('Widget MarginX'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed('/widget_padding_x');
+              },
+              child: const Text('Widget PaddingX'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed('/widget_sliver_box');
+              },
+              child: const Text('Widget Sliver Box'),
+            ),
           ],
         ),
       ),
