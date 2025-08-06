@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_ui_utils/pages/context_ext/context_ext_page.dart';
+import 'package:get_ui_utils/pages/get_view/get_view_controller.dart';
+import 'package:get_ui_utils/pages/get_view/get_view_page.dart';
 import 'package:get_ui_utils/pages/home_page.dart';
 import 'package:get_ui_utils/pages/widget_margin_x/widget_margin_x_page.dart';
 import 'package:get_ui_utils/pages/widget_padding_x/widget_padding_x_page.dart';
@@ -39,6 +41,11 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/widget_sliver_box',
           page: () => const WidgetSliverBoxPage(),
+        ),
+        GetPage(
+          name: '/get_view',
+          binding: BindingsBuilder(() => Get.lazyPut(() =>GetViewController())),
+          page: () => const GetViewPage(),
         ),
       ],
     );
