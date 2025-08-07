@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_ui_utils/pages/context_ext/context_ext_page.dart';
+import 'package:get_ui_utils/pages/get_reponsive_view/get_responsive_view_controller.dart';
+import 'package:get_ui_utils/pages/get_reponsive_view/get_responsive_view_page.dart';
 import 'package:get_ui_utils/pages/get_view/get_view_controller.dart';
 import 'package:get_ui_utils/pages/get_view/get_view_page.dart';
 import 'package:get_ui_utils/pages/home_page.dart';
@@ -44,8 +46,13 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: '/get_view',
-          binding: BindingsBuilder(() => Get.lazyPut(() =>GetViewController())),
+          binding: BindingsBuilder(() => Get.lazyPut(() => GetViewController())),
           page: () => const GetViewPage(),
+        ),
+        GetPage(
+          name: '/get_reponsive_view',
+          binding: BindingsBuilder.put(() => GetResponsiveViewController()),
+          page: () => GetResponsiveViewPage(),
         ),
       ],
     );

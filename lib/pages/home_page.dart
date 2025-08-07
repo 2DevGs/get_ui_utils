@@ -44,6 +44,12 @@ class HomePage extends StatelessWidget {
               },
               child: const Text('Get View'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed('/get_reponsive_view');
+              },
+              child: const Text('Get Responsive View'),
+            ),
           ],
         ),
       ),
